@@ -22,7 +22,6 @@ class UserAgent():
 
 		return self
 
-
 	def __repr__(self):
 		return {
 			"agent_string": self.agent_string,

@@ -1,4 +1,3 @@
-import time
 import requests
 
 class Proxy:
@@ -69,6 +68,7 @@ class Proxy:
             "http": 'http://%s:%s' % (proxy_model.address, proxy_model.port),
             "https": 'https://%s:%s' % (proxy_model.address, proxy_model.port)
         }
+
         try:
             r = requests.get(testUrl, headers=headers, proxies=proxyDict, timeout=10)
             if int(r.status_code) != 200:

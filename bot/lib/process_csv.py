@@ -16,7 +16,6 @@ def add_proxy_list_to_db(file_path, version=6, project_id=1, description=""):
 			datax = data1.split(":")
 			ip = datax[0]
 			port = datax[1]
-			#userdata = datax[2].split("@")
 			username = '' #userdata[0]
 			password = '' #userdata[1]
 
@@ -30,8 +29,7 @@ def add_proxy_list_to_db(file_path, version=6, project_id=1, description=""):
 					% (project_id,version, ip, port, description))
 
 				db.execQuery(query)
-				
-			
+
 	return True
 
 

@@ -11,24 +11,16 @@ def generate_string(size=10, chars=None):
 
 
 def generate_password(size=10, chars=None):
-	"""
-	if chars is None:
-		chars = string.ascii_uppercase+string.ascii_lowercase+string.digits
-	return (''.join(random.choice(chars) for _ in range(size)))
-	"""
-
 	minNumbers = 2
 	minChars = 2
 	minLetters = size-minNumbers-minChars
 
 	dat = ''.join((random.choice(string.ascii_letters) for i in range(minLetters)))
 	dat += ''.join((random.choice(string.digits) for i in range(minNumbers)))
-	#dat += ''.join((random.choice(string.punctuation) for i in range(minChars)))
 
 	str_var = list(dat)
 	random.shuffle(str_var)
 	return (''.join(str_var))
-
 
 
 def kill_child_processes(parent_pid, sig=signal.SIGTERM):
@@ -44,8 +36,6 @@ def kill_child_processes(parent_pid, sig=signal.SIGTERM):
 		#process.send_signal(sig)
 		#process.kill()
 		kill(process.pid,signal.SIGINT)
-
-
 
 
 def kill(pid, signum):

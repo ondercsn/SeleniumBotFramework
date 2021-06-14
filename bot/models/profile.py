@@ -1,5 +1,4 @@
 from bot.lib.functions import *
-from bot.db._mysql import DB
 from bot.models.email import Email
 from bot.models.proxy import Proxy
 from bot.models.useragent import UserAgent
