@@ -1,0 +1,9 @@
+.idea/
+__pycache__
+*.pyc
+venv/
+tmp/
+cookies/
+*.log
+*.zip
+tmp/
